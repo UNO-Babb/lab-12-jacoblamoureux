@@ -1,44 +1,49 @@
-Name:
+Name: Jacob Lamoureux
 
-Number of elements:
+Number of elements:10,000
 
 Bubble Sort
-Sorted:
-Reversed:
-Random:
+Ordered list time: 2.49464 seconds
+Reversed list time: 5.67831 seconds
+Random list time: 4.45339 seconds
 
 Bubble Sort Early Exit
-Sorted:
-Reversed:
-Random:
+Ordered list time: 0.00057 seconds
+Reversed list time: 5.85705 seconds
+Random list time: 4.56337 seconds
 
 Selection Sort
-Sorted:
-Reversed:
-Random:
+Ordered list time: 1.95341 seconds
+Reversed list time: 2.03178 seconds
+Random list time: 1.94749 seconds
 
 Insertion Sort
-Sorted:
-Reversed:
-Random:
+Ordered list time: 0.00101 seconds
+Reversed list time: 4.35398 seconds
+Random list time: 2.28902 seconds
 
 Merge Sort
-Sorted:
-Reversed:
-Random:
+Ordered list time: 0.01987 seconds
+Reversed list time: 0.02087 seconds
+Random list time: 0.01946 seconds
 
 Questions to answer:
 1) What was the worst case scenario for any sorting technique?
-
+The Bubble sort early exit reverse list was the slowest out of any of the scenarios.
 
 2) The first 3 sorts have the same runtime of O(n^2). Why were the times different? Why would one be more efficient than the others?
-
+The times are different because of the different ways the sorting methods operate. Early exit and insertion are able 
+to go faster because they are able to identify pre-sorted sections, whereas selection sort checks all of the items regardless.
 
 3) Why was merge sort so much more efficient?
-
+Because merge use log n instead of n^2, it is able to break the data into small pieces and then combine it. 
+This allows Merge sort to consistently sort at around .02 seconds.
 
 4) The built-in sorting technique for most programming languages is known as TimSort.
 This is a merge sort until the arrays have fewer than 10 elements, then it does an insertion sort. Why would this be useful?
-
+This is useful simply due to the natures of merge and insertion sorts. Merge sorts are very effective with larger data sets, and when 
+it gets to smaller datasets, insertion sorts are more effective.
 
 5) What issues can you see with a recursive sorting technique like merge sort?
+Some issues are that when used for smaller datasets, merge sorts can be ineffective and actually slower than other methods like 
+insertion sort due to function calls. Also, it uses extra memory to sort, which is an issue not found in other methods.
